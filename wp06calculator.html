@@ -1,0 +1,58 @@
+<script>
+function btncancel_onclick(){
+    location.href='wp06calculator.html';
+}
+function btnplus_onclick(){
+    var fn=0, sn=0, res=0;
+    fn=tbxfn.value;
+    sn=tbxsn.value;
+
+    fn=parseFloat(fn);
+    sn=parseFloat(sn);
+
+    fn=isNaN(fn) ? 0 : fn;
+    sn=isNaN(sn) ? 0 : sn;
+
+    res=fn + sn;
+
+    tbxfn.value=fn;
+    tbxsn.value=sn;
+    tbxres.value=res;
+}
+</script>
+<table border="1">
+    <tr>
+    <td>First letter
+    <td>
+    <input type="text" id="tbxfn" autocomplete="off"/>
+
+    <tr>
+    <td>Second letter
+    <td>
+    <input type="text" id="tbxsn" autocomplete="off"/>
+
+    <tr>
+    <td>Result
+    <td>
+    <input type="text" readonly="readonly" id="tbxres"/>
+
+    <tr>
+        <td>
+            <input type="button" value="cancel" onclick="btncancel_onclick();"
+            />
+            <td>
+                <input type="button" value="+" onclick="btnplus_onclick();"
+                />
+            </table>
+
+
+
+
+
+
+
+
+
+    
+
+    
